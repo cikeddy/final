@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+@media print { 
+	
+main img {
+	-webkit-filter: grayscale(100%); 
+	 filter: grayscale(100%);
+}
+	
+button, .button {
+	display: none;
+}
+ header, footer, nav {
+	display: none;
+	} 
+
+
+main {
+	margin-top: 10px;
+}
+}
+

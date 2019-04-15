@@ -1,0 +1,412 @@
+/* CSS Document */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 100px;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+}
+
+
+main {
+	margin-top: 270px;
+	background-color: #1E0303;
+	font-family: 'Karma', serif;
+	padding: 0 30px 30px 0px;
+	margin-left: 40px;
+	color: white;
+	border: white;
+	text-decoration: none;
+	text-align: justify;
+}
+
+
+main p, h3{
+	font-size: large;
+	margin-bottom: 16px;
+}
+
+ol, ul {
+	margin: 20px;
+	text-align:left;
+}
+
+main h1 {
+	font-size: xx-large;
+	margin-bottom: 16px;
+}
+
+main h2 {
+	font-size: x-large;
+	margin-bottom: 8px;
+}
+
+main h3 {
+	font-size: large;
+}
+
+main h1, h2, h3 {
+	text-align: center;
+}
+
+main img {
+	margin-bottom: 16px;
+}
+
+body {
+	background-color: #1E0303;
+}
+
+button, .button {
+	background: #EC2127;
+	font-family:'Century Gothic', CenturyGothic, Arial, sans-serif, bold;
+	text-transform: uppercase;
+	padding: 10px;
+	border-color:black;
+	border-width: 1px;
+	display: inline-block;
+	margin: 20px 20px 20px 45%;
+	min-width: 100px;
+}
+
+button:hover, .button {
+	color: white;
+}
+
+body .decorative {
+	max-height: 50vh;
+	max-width: 70%;
+	display: block;
+	margin: auto;
+}
+
+body .banner {	
+	max-width: 100%;
+	justify-content: center;
+	margin-bottom: 16px;
+	margin-top: 0px;
+}
+
+header img {
+	height: 50px;
+	padding: 20px;
+	margin-left: 40px;
+}
+
+
+/*header code adapted from https://codetheweb.blog/2017/12/12/style-a-navigation-bar-css/*/
+header {
+	background-color: #1E0303;
+	position: fixed;
+	height: 250px;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex; 
+	align-items:flex-start;
+	justify-content: flex-start;
+	box-shadow: 0 0 25px 0 black;
+}
+
+
+li a {
+	display: block;
+	width: 110px;
+	padding: 8px 16px;
+	margin: 0px;
+}
+
+a {
+	color: white;
+}
+
+nav * {
+	color: #EC2127;
+	font-family:'Century Gothic', CenturyGothic, Arial, sans-serif, bold;
+	text-decoration: none;
+	background-color: black;
+	font-weight: bold;
+}
+
+.skip-main {
+	color: #EC2127;
+	position: absolute;
+	left: -1000px;
+}
+
+.skip-main:focus {
+	left: 10px;
+	top: 300px;
+	display: inline-block;
+	transition: .5s;
+	padding: 10px;
+	background-color: black;
+	font-size: 14px;
+}
+
+.current {
+	text-transform: uppercase;
+}
+
+nav a:hover {
+	background-color: white;
+}
+
+footer *{
+	display: inline-block;
+	padding: 2vh 0;
+	background-color: #1E0303;
+	color:#EC2127;
+	font-size: medium;
+	font-family:'Karma', serif;
+}
+footer {
+	padding-left: 2vh;
+	background-color: #1E0303;
+	display: flex;
+	justify-content: space-around;
+	box-shadow: 0 0 25px 0 black;
+}
+
+.gallery img {
+	height: auto;
+	max-width: 75%;
+	padding: 5%;
+}
+
+.gallery {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  	justify-content: center;
+}
+
+.tests-container .test h2 {
+	text-align: center;
+	text-transform: uppercase;
+	background-color: white;
+	color: black;
+	padding: 10px 0;
+	width: 100%;
+	position:static;
+}
+
+
+.tests-container .test {
+	background-color: hsla(0,100%,0%,0.88); 
+	padding: 10px;
+	margin: 20px;
+	max-width: 75%;
+}
+
+.tests-container {
+	background-color: white;
+	background-image: url("../images/nyc_aerial.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 30px;
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+  	justify-content: center;
+}
+
+#team figure {
+	padding: 0 0 10px;
+}
+
+#team figure img {
+	margin-bottom: 8px;
+	max-height: 20vh;
+	max-width: inherit;
+}
+
+#team {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex; 
+	justify-content: flex-start;
+	flex-direction: column;
+	}
+
+input, textarea {
+	display: block;
+	width: 33%;
+	margin-bottom: 10px;
+}
+
+input:focus , textarea:focus {
+	background-color: yellow;
+}
+
+input[type=submit] {
+	margin-left: 0px;
+	color: black;
+	font-weight: bold;
+}
+
+
+
+
+label {
+	width: 20%;
+}
+
+form * {
+	min-width: 60%;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+@media screen and (orientation: landscape) {
+	header {
+		height: 100px;
+		justify-content: space-between;
+		align-items:center;
+	}
+	
+	header li {
+		display: inline-block;
+	}
+	
+	nav a:hover {
+		background-color: black;
+	}
+	
+	nav * {
+		background-color: transparent;
+	}
+	
+	main {
+		margin-top: 120px;
+	}
+	
+	.tests-container .test {
+			max-width: 33%;
+	}
+	
+	.tests-container {
+		flex-direction: row;
+		align-items: baseline;
+	}
+	
+}
+
+
+@media (min-width: 1200px) and (max-width:2000px) {
+
+.skip-main:focus {
+	left: 10px;
+	top: 120px;
+	display: inline-block;
+	transition: .5s;
+}
+	
+main {
+	margin-top: 160px;
+	padding: 0 30px 30px 0px;
+}
+header li {
+	display: inline-block;
+	margin-top: 20px;
+	left: 10px;
+}
+	
+header {
+	height: 100px;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	align-content: center;
+}
+	
+header img {
+	margin-left: 0;
+	margin-right: 16px;
+}
+	
+.gallery img {
+	max-height: 25%;
+	padding: .5%;
+}
+
+.gallery {
+	height: 1000px;
+	flex-direction: row;
+	flex-wrap:wrap;
+	justify-content: flex-start;
+}
+	
+.tests-container {
+	flex-direction: row;
+	width: 100%;
+	height: 50vh;
+	align-items: baseline;
+	justify-content: center;
+}
+	
+.tests-container .test {
+	background-color: hsla(0,100%,0%,0.88); 
+	padding: 16px;
+	max-width: 33%;
+	flex:1 ;
+	}
+
+#team {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex; 
+	justify-content: flex-start;
+	flex-direction: row;
+	}
+
+#team figure {
+		padding: 10px;
+	}
+	
+nav a:hover {
+	color: hsla(358,84%,53%,0.67);
+	background-color: transparent;
+}
+	
+nav * {
+	background-color: transparent;
+}
+
+main h1, h2, h3 {
+	text-align: left;
+}
+	
+body .decorative {
+	margin: 0px;
+}
+	
+button, .button {
+	margin: 20px 20px 20px 0px;
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+a.skip-main{
+   -webkit-transition-property: none;
+   -moz-transition-property: none;
+   -o-transition-property: none;
+   transition-property: none;
+  }
+}
+
