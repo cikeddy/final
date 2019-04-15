@@ -130,7 +130,7 @@ a {
 	color: white;
 }
 
-nav * {
+.nav * {
 	color: #EC2127;
 	font-family:'Century Gothic', CenturyGothic, Arial, sans-serif, bold;
 	text-decoration: none;
@@ -158,9 +158,11 @@ nav * {
 	text-transform: uppercase;
 }
 
-nav a:hover {
+/*
+.nav a:hover {
 	background-color: white;
 }
+*/
 
 footer *{
 	display: inline-block;
@@ -293,11 +295,11 @@ form {
 		display: inline-block;
 	}
 	
-	nav a:hover {
+	.nav a:hover {
 		background-color: black;
 	}
 	
-	nav * {
+	.nav * {
 		background-color: transparent;
 	}
 	
@@ -387,12 +389,12 @@ header img {
 		padding: 10px;
 	}
 	
-nav a:hover {
+.nav a:hover {
 	color: hsla(358,84%,53%,0.67);
 	background-color: transparent;
 }
 	
-nav * {
+.nav * {
 	background-color: transparent;
 }
 
@@ -408,6 +410,11 @@ button, .button {
 	margin: 20px 20px 20px 0px;
 
 }
+.nav .icon {
+	display: none;
+}
+	
+}
 
 
 @media (prefers-reduced-motion: reduce) {
@@ -418,4 +425,28 @@ a.skip-main{
    transition-property: none;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .nav a:not(.current) {display: none;}
+  .nav a.icon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav.responsive {position: relative;}
+  .nav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+	text-align: right;
+	width: 10px;
+  }
+	
+  .nav.responsive a {
+    display: block;
+    text-align: left;
+  }
+}
+
 
