@@ -273,6 +273,15 @@ form {
 	flex-direction: column;
 }
 
+#qr, .qr {
+	display: none;
+}
+
+.errorMsg { 
+      color:red;
+      display:none; 
+} 
+
 @media screen and (orientation: landscape) {
 	header {
 		height: 100px;

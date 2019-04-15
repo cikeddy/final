@@ -7,9 +7,18 @@ main img {
 	 filter: grayscale(100%);
 }
 	
+img {
+		padding: 20px;
+}
+	
 button, .button {
 	display: none;
 }
+	
+form {
+		display:none;
+}	
+	
  header, footer, nav {
 	display: none;
 	} 
@@ -17,6 +26,17 @@ button, .button {
 
 main {
 	margin-top: 10px;
+}
+	
+#qr {
+		display: block;
+		width: 150px;
+		margin: 0px auto;
+}
+	
+.qr {
+	margin-top: 20px;
+	display: block;
 }
 }
 

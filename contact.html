@@ -27,12 +27,62 @@
 	<h1> Interested in Our Services?</h1>
 	<h2> Interested in Working with Us?</h2>
 	<h2> Please Contact Us</h2>
-	<form method="post" id="main" action="https://formspree.io/cassandra@eddyenterprises.com">
-		<label for="name">Name: <input type="text" id="name" name="name" placeholder="Your name here..." required></label>
-		<label for="email">Email: <input type="email" id="email" name="email" placeholder="Your email here..." required></label>
-		<label for="telephone">Phone: <input type="tel" id="telephone" name="telephone" placeholder="Your phone number here..." required></label>
-		<label for="message">Message: <textarea id="message" name="message" placeholder="Your message here..." required></textarea></label>
-		<input type="submit" id="submit-button" class="button" value="Submit"></form></main>
+	<form method="post" id="main" action="https://formspree.io/cassandra@eddyenterprises.com" onSubmit=" return checkForm()">
+		<label for="name">Name: <input type="text" id="name" name="name" placeholder="Your name here..."></label>
+		<p class="errorMsg" id="nameError">Please enter your name above</p>
+		<label for="email">Email: <input type="email" id="email" name="email" placeholder="Your email here..."></label>
+		<p class="errorMsg" id="emailError">Please enter your email above</p>
+		<label for="telephone">Phone: <input type="tel" id="telephone" name="telephone" placeholder="Your phone number here..." ></label>
+		<p class="errorMsg" id="telError">Please enter a valid telephone number above</p>
+		<label for="message">Message: <textarea id="message" name="message" placeholder="Your message here..."></textarea></label>
+		<p class="errorMsg" id="msgError">Please tell us how we can help you!</p>
+		<input type="submit" id="submit-button" class="button" value="Submit"></form>
+	<h2 class="qr"> Scan to find us on the web!</h2>
+	<img src="images/qr.png" id="qr" alt="QR code"/> 
+	</main>
 <footer> <p><i class="fas fa-phone" title="phone number" aria-label="phone number"></i> (908) 400-7775</p> <p><i class="far fa-copyright" title="copyright" aria-label="copyright symbol"> </i> EEL </p> </footer>
+<script>
+	function checkForm(){
+		let name_len = document.getElementById('name').value.length;
+		let email_len = document.getElementById('email').value.length;
+		let tel_len = document.getElementById('telephone').value.length;
+		let regex=/^[0-9]+$/;
+		let tel_val = document.getElementById('telephone').value;
+		let msg_len = document.getElementById('message').value.length;
+		
+	if (name_len == 0) {
+		document.getElementById('nameError').style.display = 'block';
+	}
+	else {
+		document.getElementById('nameError').style.display = 'none';
+	}
+	if (email_len == 0) {
+		document.getElementById('emailError').style.display = 'block';
+	}	
+	else {
+		document.getElementById('emailError').style.display = 'none';
+	}
+	if (tel_len !=10 || !(tel_val.match(regex))) {
+		document.getElementById('telError').style.display = 'block';
+	}	
+	else {
+		document.getElementById('telError').style.display = 'none';
+	}
+		
+	if (msg_len == 0) {
+		document.getElementById('msgError').style.display = 'block';
+	}	
+	else {
+		document.getElementById('msgError').style.display = 'none';
+	}	
+		
+	if (name_len != 0 && email_len !=0 && tel_len==10 && tel_val.match(regex) && msg_len !=0 ){
+		return true;
+	}
+	else {
+		return false;
+	}
+	}
+	</script>
 </body>
 </html>
