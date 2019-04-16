@@ -507,8 +507,8 @@ a.skip-main{
   .nav.resnotponsive {position: relative;}
   .nav.responsive a.icon {
     position: absolute;
-    right: 200px;
-    top: 20px;
+    right: 0;
+    top: 0;
 	text-align: right;
 	width: 10px;
   }
