@@ -287,6 +287,16 @@ form {
       display:none; 
 } 
 
+.flip-card-back {
+	display: none;
+}
+
+.title h3,p{
+	text-align: left;
+}
+
+
+
 
 
 
@@ -322,8 +332,7 @@ form {
 	.tests-container {
 		flex-direction: row;
 		align-items: baseline;
-	}
-	
+	}	
 }
 
 
@@ -452,6 +461,7 @@ button, .button {
 
 /* Position the front and back side */
 .flip-card-front, .flip-card-back {
+  display: inherit;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -470,10 +480,17 @@ button, .button {
   color: white;
   transform: rotateY(180deg);
 }
+	
+.flip-card-back h3, .flip-card-back p {
+	text-align: center;
+}	
 
 .flip-card-back h3 {
-	text-align: center;
-	margin-top: 8vh;
+		margin-top: 8vh;
+}
+	
+.title{
+		display:none;
 }
 	
 	
@@ -510,7 +527,7 @@ a.skip-main{
   .nav.responsive a.icon {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 20px;
 	text-align: right;
 	width: 10px;
   }
