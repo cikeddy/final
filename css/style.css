@@ -126,6 +126,7 @@ li a {
 	margin: 0px;
 }
 
+
 a {
 	color: white;
 }
@@ -225,11 +226,13 @@ footer {
   	justify-content: center;
 }
 
-#team figure {
+/*
+#team {
 	padding: 0 0 10px;
 }
+*/
 
-#team figure img {
+#team img {
 	margin-bottom: 8px;
 	max-height: 20vh;
 	max-width: inherit;
@@ -283,6 +286,64 @@ form {
       color:red;
       display:none; 
 } 
+
+
+/*/////////code from w3//////*/ 
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 30vh;
+  height: 20vh;
+  perspective: 1000px;  /*Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover  .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card:focus  .flip-card-inner{
+   transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #1E0303;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back h3 {
+	text-align: center;
+	margin-top: 8vh;
+}
+
+
+/*/////////code from w3//////*/ 
 
 @media screen and (orientation: landscape) {
 	header {
@@ -429,16 +490,25 @@ a.skip-main{
 @media screen and (max-width: 600px) {
   .nav a:not(.current) {display: none;}
   .nav a.icon {
-    display: block;
+    display: inline-block;
+	text-align: right;
   }
+	.nav ul {
+	display: flex;
+	flex-direction: row;
+	}
+	
+	header {
+		height: 0px;
+	}
 }
 
 @media screen and (max-width: 600px) {
-  .nav.responsive {position: relative;}
+  .nav.resnotponsive {position: relative;}
   .nav.responsive a.icon {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 200px;
+    top: 20px;
 	text-align: right;
 	width: 10px;
   }
@@ -447,6 +517,11 @@ a.skip-main{
     display: block;
     text-align: left;
   }
+	
+   .nav.responsive ul {
+	display: flex;
+	flex-direction: column;
+	}
 }
 
 

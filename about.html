@@ -16,13 +16,15 @@
 <header> 
 	<a class="skip-main" href="#main">Skip to main content</a>
 	<img src="images/symbol_flat.png" alt="EEL logo"/>
-	<nav> <ul> 
+	<nav class="nav" id="nav"> <ul> 
 		<li> <a href="index.html">Home</a></li>
 		<li> <a href="about.html" class="current"><strong>About</strong></a> </li>
 		<li> <a href="team.html">Team</a></li>
 		<li> <a href="services.html">Services</a></li>
 		<li> <a href="testimonials.html">Testimonials</a></li>
 		<li> <a href="contact.html">Contact Us</a></li>
+		<li> <a href="javascript:void(0);" class="icon" onclick="changeNav()">
+			<i class="fa fa-bars" label="hamburger menu"></i></a></li>
 		</ul></nav>
 </header>
 	<main id="main">
@@ -46,5 +48,15 @@
 <img src="images/qr.png" id="qr" alt="QR code"/>	
 </main>
 <footer> <p><i class="fas fa-phone" title="phone number" aria-label="phone number"></i> (908) 400-7775</p> <p><i class="far fa-copyright" title="copyright" aria-label="copyright symbol"> </i> EEL </p> </footer>
+<script>
+	function changeNav() {
+  	let nav = document.getElementById("nav");
+	if (nav.className === "nav") {
+    nav.className += " responsive";
+  } else {
+    nav.className = "nav";
+  }
+}
+	</script>
 </body>
 </html>
