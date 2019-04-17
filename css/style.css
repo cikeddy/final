@@ -69,7 +69,9 @@ button, .button {
 	background: #EC2127;
 	font-family:'Century Gothic', CenturyGothic, Arial, sans-serif, bold;
 	text-transform: uppercase;
+	cursor: pointer;
 	padding: 10px;
+	border-radius: 3px;
 	border-color:black;
 	border-width: 1px;
 	display: inline-block;
@@ -300,7 +302,77 @@ form {
 
 
 
-/*/////////code from w3//////*/ 
+/*/////////end code from w3//////*/ 
+
+/******start accordion code adapted from w3******/
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: 1px;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  width: 99%;
+  display: text;
+  align-content: center;
+  padding: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 16px;
+/*
+  border: .5px solid white;
+  border-style: hidden solid solid solid;
+  border-radius: 3px;
+*/
+  background-color: transparent;
+  display: none;
+  overflow: hidden;
+}
+
+.panel p {
+  padding-left: 10px;
+  padding-top:10px;
+}
+
+button.accordion {
+  margin: 0px;
+  border: solid #1E0303;
+  border-radius: 3px;
+}
+
+.accordion-container {
+  margin-bottom: 16px;
+}
+
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #1E0303;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/******end accordion code adapted from w3******/
 
 @media screen and (orientation: landscape) {
 	header {
@@ -431,7 +503,12 @@ button, .button {
 	display: none;
 }
 	
-/*/////////code from w3//////*/ 
+/*/////////start code from w3//////*/
+	
+	
+	
+	
+	
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;

@@ -43,14 +43,14 @@
 		<button onclick="window.location.href='contact.html'"> <strong> Contact Us </strong> </button>
 	<p>We use a unique approach called the 4 A's to assist our customers:</p>
 	<h3>Analyze | Assemble | Apply | Ally</h3>
-<h4>Analyze</h4>
-<p>During the Analyze phase, we conduct an extensive survey to determine the current business practices and future business forecasting goals and objectives of your company.</p>
-<h4>Assemble</h4>
-<p>We analyze this information to conjointly Assemble credible IT solutions and make recommendations that integrate the current business practices and future business forecasting goals and objectives of your company.</p>
-<h4>Apply</h4>
-<p>Based on the final approval of the assembly document, we Apply the solutions to your organization. During this phase we develop and implement all mutually agreed upon IT decisions and solutions.</p>
-<h4>Ally</h4>
-<p>And finally, we Ally with our clients by establishing ongoing partnerships to ensure that these systems and infrastructures operate smoothly during the maintenance phase.  We constantly monitor systems to identify potential problems and correct them before critical system failures occur. This phase also includes the ongoing examination of new technologies to assess the technical advancement viability for advantageous business growth paths for our customers’ IT environment.</p>
+<div class="accordion-container"><button class="accordion">Analyze</button>
+<div class="panel"><p>During the Analyze phase, we conduct an extensive survey to determine the current business practices and future business forecasting goals and objectives of your company.</p></div>
+<button class="accordion">Assemble</button>
+<div class="panel"><p>We analyze this information to conjointly Assemble credible IT solutions and make recommendations that integrate the current business practices and future business forecasting goals and objectives of your company.</p></div>
+<button class="accordion">Apply</button>
+<div class="panel"><p>Based on the final approval of the assembly document, we Apply the solutions to your organization. During this phase we develop and implement all mutually agreed upon IT decisions and solutions.</p></div>
+<button class="accordion">Ally</button>
+<div class="panel"><p>And finally, we Ally with our clients by establishing ongoing partnerships to ensure that these systems and infrastructures operate smoothly during the maintenance phase.  We constantly monitor systems to identify potential problems and correct them before critical system failures occur. This phase also includes the ongoing examination of new technologies to assess the technical advancement viability for advantageous business growth paths for our customers’ IT environment.</p></div></div>
 <img src="images/server_work.jpg" class="decorative" alt="an engineer working on a server"/>
 <button onclick="window.location.href='index.html'"> <strong> Return to Homepage</strong></button>
 <h2 class="qr"> Scan to find us on the web!</h2>
@@ -65,6 +65,25 @@
   } else {
     nav.className = "nav";
   }
+}
+	
+let acc = document.getElementsByClassName("accordion");
+let i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    let panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }
 	</script>
 </body>
