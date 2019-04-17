@@ -70,13 +70,17 @@ button, .button {
 	font-family:'Century Gothic', CenturyGothic, Arial, sans-serif, bold;
 	text-transform: uppercase;
 	cursor: pointer;
-	padding: 10px;
+	padding: 15px;
 	border-radius: 3px;
 	border-color:black;
 	border-width: 1px;
-	display: inline-block;
-	margin: 20px 20px 20px 45%;
-	min-width: 100px;
+	display: flex;
+	align-content: center;
+/*	width: 100%;*/
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	min-width: 120px;
 }
 
 button:hover, .button {
@@ -328,7 +332,7 @@ form {
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   width: 99%;
-  display: text;
+  display: text;bu
   align-content: center;
   padding: 0px;
   padding-top: 0px;
