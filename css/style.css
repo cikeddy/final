@@ -342,7 +342,8 @@ form {
   padding-top: 0px;
   padding-bottom: 0px;
   margin-bottom: 16px;
-/*
+/*took out this look but might add it back in later
+	
   border: .5px solid white;
   border-style: hidden solid solid solid;
   border-radius: 3px;
@@ -632,12 +633,11 @@ a.skip-main{
 	}
 }
 
-/*
+/*code from w3 to make sure parallax is turned off on mobile*/
 @media only screen and (max-device-width: 1366px) {
   .tests-container {
     background-attachment: scroll;
   }
 }
-*/
 
 
