@@ -74,6 +74,7 @@ button, .button  {
 	background: #EC2127;
 	font-family:'Century Gothic', CenturyGothic, Arial, sans-serif, bold;
 	text-transform: uppercase;
+	font-size: 15px;
 	cursor: pointer;
 	padding: 15px;
 	border-radius: 3px;
@@ -263,9 +264,10 @@ footer {
 	flex-direction: column;
 	}
 
+
 input, textarea {
 	display: block;
-	width: 33%;
+	width: 100%;
 	margin-bottom: 10px;
 }
 
@@ -287,7 +289,7 @@ label {
 }
 
 form * {
-	min-width: 60%;
+	min-width: 100%;
 }
 
 form {
@@ -393,6 +395,11 @@ nav li a i > span {
 	header li {
 		display: inline-block;
 	}
+
+	
+	form * {
+	min-width: 33%;
+}
 	
 	.nav a:hover {
 		background-color: black;
