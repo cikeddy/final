@@ -17,7 +17,7 @@ footer {
 
 
 main {
-	margin-top: 270px;
+/*	margin-top: 10vh;*/
 	background-color: #1E0303;
 	font-family: 'Karma', serif;
 	padding: 0 30px 30px 0px;
@@ -61,11 +61,16 @@ main img {
 	margin-bottom: 16px;
 }
 
+main {
+	margin-top: 160px;
+	padding: 0 30px 30px 0px;
+}
+
 body {
 	background-color: #1E0303;
 }
 
-button, .button {
+button, .button  {
 	background: #EC2127;
 	font-family:'Century Gothic', CenturyGothic, Arial, sans-serif, bold;
 	text-transform: uppercase;
@@ -74,14 +79,17 @@ button, .button {
 	border-radius: 3px;
 	border-color:black;
 	border-width: 1px;
-	display: flex;
-	align-content: center;
-/*	width: 100%;*/
+	width: 100%;
 	margin: auto;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	min-width: 120px;
 }
+
+button {
+	text-align: center;
+}
+
 
 button:hover, .button {
 	color: white;
@@ -141,7 +149,7 @@ a {
 	color: #EC2127;
 	font-family:'Century Gothic', CenturyGothic, Arial, sans-serif, bold;
 	text-decoration: none;
-	background-color: black;
+	background-color: #1E0303;
 	font-weight: bold;
 }
 
@@ -215,12 +223,15 @@ footer {
 	background-color: hsla(0,100%,0%,0.88); 
 	padding: 10px;
 	margin: 20px;
-	max-width: 75%;
+	width: 70%;
 }
 
 .tests-container {
 	background-color: white;
 	background-image: url("../images/nyc_aerial.jpg");
+	height: inherit;
+	background-attachment: fixed;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding: 30px;
@@ -301,17 +312,10 @@ form {
 	text-align: left;
 }
 
-
-
-
-
-
-/*/////////end code from w3//////*/ 
-
 /******start accordion code adapted from w3******/
 
 
-/* Style the buttons that are used to open and close the accordion panel */
+
 .accordion {
   background-color: #eee;
   color: #444;
@@ -324,15 +328,13 @@ form {
   transition: 0.4s;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
 .active, .accordion:hover {
   background-color: #ccc;
 }
 
-/* Style the accordion panel. Note: hidden by default */
 .panel {
   width: 99%;
-  display: text;bu
   align-content: center;
   padding: 0px;
   padding-top: 0px;
@@ -350,7 +352,7 @@ form {
 
 .panel p {
   padding-left: 10px;
-  padding-top:10px;
+  padding-top: 10px;
 }
 
 button.accordion {
@@ -365,15 +367,14 @@ button.accordion {
 
 
 .accordion:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
+  content: '\02795'; 
   color: #1E0303;
   float: right;
   margin-left: 5px;
 }
 
 .active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
+  content: "\2796"; 
 }
 
 /******end accordion code adapted from w3******/
@@ -397,18 +398,10 @@ button.accordion {
 		background-color: transparent;
 	}
 	
-	main {
-		margin-top: 120px;
-	}
 	
 	.tests-container .test {
-			max-width: 33%;
+			max-width: 40%;
 	}
-	
-	.tests-container {
-		flex-direction: row;
-		align-items: baseline;
-	}	
 }
 
 
@@ -420,11 +413,7 @@ button.accordion {
 	display: inline-block;
 	transition: .5s;
 }
-	
-main {
-	margin-top: 160px;
-	padding: 0 30px 30px 0px;
-}
+
 header li {
 	display: inline-block;
 	margin-top: 20px;
@@ -456,9 +445,8 @@ header img {
 }
 	
 .tests-container {
-	flex-direction: row;
+	flex-direction: column;
 	width: 100%;
-	height: 50vh;
 	align-items: baseline;
 	justify-content: center;
 }
@@ -466,7 +454,7 @@ header img {
 .tests-container .test {
 	background-color: hsla(0,100%,0%,0.88); 
 	padding: 16px;
-	max-width: 33%;
+	width: 70%;
 	flex:1 ;
 	}
 
@@ -501,27 +489,29 @@ body .decorative {
 	
 button, .button {
 	margin: 20px 20px 20px 0px;
+	width: inherit;
 
 }
+	
+input[type=submit] {
+	max-width: 200px;
+	color: black;
+	font-weight: bold;
+}
+		
+
 .nav .icon {
 	display: none;
 }
 	
-/*/////////start code from w3//////*/
-	
-	
-	
-	
-	
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+/*/////////start code adopted from w3//////*/
 .flip-card {
   background-color: transparent;
   width: 30vh;
   height: 20vh;
-  perspective: 1000px;  /*Remove this if you don't want the 3D effect */
+  perspective: 1000px;  
 }
 
-/* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -531,7 +521,6 @@ button, .button {
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover  .flip-card-inner {
   transform: rotateY(180deg);
 }
@@ -549,13 +538,12 @@ button, .button {
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
+
 .flip-card-front {
   background-color: #1E0303;
   color: black;
 }
 
-/* Style the back side */
 .flip-card-back {
   background-color: black;
   color: white;
@@ -573,7 +561,10 @@ button, .button {
 .title{
 		display:none;
 }
-	
+
+.tests-container {
+min-height: 1000px;
+}
 	
 }
 
@@ -592,6 +583,9 @@ a.skip-main{
   .nav a.icon {
     display: inline-block;
 	text-align: right;
+	position: absolute;
+    right: 0;
+    top: 20px;
   }
 	.nav ul {
 	display: flex;
@@ -599,16 +593,14 @@ a.skip-main{
 	}
 	
 	header {
-		height: 0px;
+		height: 10vh;
 	}
 }
 
 @media screen and (max-width: 600px) {
   .nav.resnotponsive {position: relative;}
   .nav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 20px;
+
 	text-align: right;
 	width: 10px;
   }
@@ -622,6 +614,12 @@ a.skip-main{
 	display: flex;
 	flex-direction: column;
 	}
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .tests-container {
+    background-attachment: scroll;
+  }
 }
 
 
