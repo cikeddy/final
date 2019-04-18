@@ -379,6 +379,10 @@ button.accordion {
 
 /******end accordion code adapted from w3******/
 
+nav li a i > span {
+	display:none;
+}
+
 @media screen and (orientation: landscape) {
 	header {
 		height: 100px;
