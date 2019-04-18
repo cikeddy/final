@@ -402,6 +402,11 @@ nav li a i > span {
 		background-color: transparent;
 	}
 	
+	.nav .icon {
+	display: none;
+		
+	}
+	
 	
 	.tests-container .test {
 			max-width: 40%;
